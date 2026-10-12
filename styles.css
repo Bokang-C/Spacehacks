@@ -155,3 +155,140 @@ nav a {
         animation: none;
     }
 }
+
+/* Mission */
+
+.mission {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 100px 6%;
+}
+
+/* Section heading */
+
+.section-top {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    align-items: end;
+    gap: 40px;
+    margin-bottom: 45px;
+}
+
+.section-label {
+    color: var(--accent);
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.section-top h2 {
+    font-size: clamp(36px, 4.5vw, 65px);
+    line-height: 1.1;
+    letter-spacing: -2px;
+}
+
+.section-top h2 span {
+    color: var(--accent);
+}
+
+.section-description {
+    color: var(--muted);
+    line-height: 1.8;
+    font-size: 15px;
+    max-width: 440px;
+}
+
+/* Feature cards */
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.feature-card {
+    background: linear-gradient(
+        145deg,
+        #151e2e,
+        #0c111b
+    );
+
+    border: 1px solid #29354a;
+    border-radius: 10px;
+    padding: 30px;
+    min-height: 260px;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+}
+
+.feature-number {
+    color: var(--accent);
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.feature-line {
+    width: 30px;
+    height: 2px;
+    background: var(--accent);
+    margin: 35px 0 22px;
+}
+
+.feature-card h3 {
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    color: var(--muted);
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+    .mission {
+        padding: 70px 6%;
+    }
+
+    .section-top {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-card {
+        min-height: 220px;
+    }
+}
+
+/* Reduced motion preference */
+
+@media (prefers-reduced-motion: reduce) {
+    .feature-card {
+        transition: none;
+    }
+
+    .feature-card:hover {
+        transform: none;
+    }
+}
