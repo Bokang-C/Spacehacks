@@ -115,3 +115,43 @@ nav a {
         letter-spacing: -2px;
     }
 }
+
+/* Space logo */
+.space-illustration {
+    width: 100%;
+    height: auto;
+    overflow: visible;
+    filter: drop-shadow(0 0 20px #5b7bc044);
+}
+
+/* Floating animation */
+.space-illustration {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .hero-art {
+        min-height: 0;
+        max-width: 500px;
+        width: 100%;
+        margin: auto;
+    }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .space-illustration {
+        animation: none;
+    }
+}

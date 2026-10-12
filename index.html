@@ -36,7 +36,39 @@
             </div>
 
             <div class="hero-art" aria-hidden="true">
-                <img src="images/hero-art.png" alt="Space-themed illustration">
+                <svg viewbox="0 0 600 450" class="space-illustration">
+
+                    <defs>
+                        <linearGradient id="disk" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#5476b5"/>
+                            <stop offset="50%" stop-color="#e1ebff"/>
+                            <stop offset="100%" stop-color="#678bd1"/>
+                        </linearGradient>
+
+                        <filter id="glow">
+                            <feGaussianBlur stdDeviation="12"/>
+                        </filter>
+                    </defs>
+
+                    <!--Black hole glow-->
+                    <circle cx="300" cy="225" r="115" fill="#405eaa" opacity="0.35" filter="url(#glow)"/>
+
+                    <!--Phasar-->
+                    <path d="M300 40 L300 410" stroke="#83a8ff" stroke-width="9" opacity="0.3" filter="url(#glow)"/>
+
+                    <!--Accretion disk-->
+                    <g transform="rotate(-24 300 225)">
+                        <ellipse cx="300" cy="225" rx="180" ry="64" fill="none" stroke="url(#disk)" stroke-width="20"/>
+                    </g>
+
+                    <!--Black hole-->
+                    <circle cx="300" cy="225" r="72" fill="#03050a" stroke="#b7cbff" stroke-width="3"/>
+
+                    <!--Spaceship-->
+                    <g class="spaceship" transform="translate(440 95) rotate(35)">
+                        <polygon points="0,-55 25,22 0,10 -25,22"/>
+                    </g>
+                </svg>
             </div>
         </section>
 
